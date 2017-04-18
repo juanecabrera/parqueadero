@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block section %}
+	<h2>Seleccion</h2>
+	<hr>
+{% endblock section %}
+
+{% block maincontent %}
+	{% for p in object_list.all %}
+		<a href="{% url 'carro_detail' p.id %}">
+			<h3 >{{ p.placa }}</h3>
+		</a>
+	{% endfor %}
+{% endblock maincontent %}

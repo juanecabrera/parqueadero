@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block section %}
+	<h2>
+		{{ object.nombres }}
+	</h2>
+
+	<a href="{% url 'dueno_update' object.id %}">edit</a>
+	<a href="{% url 'dueno_delete' object.id %}">delete</a​>
+	<hr>
+{% endblock section %}
+
+{% block maincontent %}
+
+{% endblock maincontent %}

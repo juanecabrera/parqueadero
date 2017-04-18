@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block maincontent %}
+	<form action="" method="post">
+		{% csrf_token %}
+		<p>Delete "{{ object.nombres }}"?</p>
+		<input type="submit" value="Confirm"/>
+		<a class='btn' href="{% url 'dueno_list' %}">Cancel</a>
+	</form>
+{% endblock maincontent %}
